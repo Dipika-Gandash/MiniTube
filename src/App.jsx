@@ -4,7 +4,7 @@ import Body from "./components/Body"
 function App() {
 
   return (
-    <div>
+    <div className="h-screen flex flex-col relative">
       <Header />
       <Body />
     </div>

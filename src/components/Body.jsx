@@ -4,7 +4,7 @@ import MainContainer from './MainContainer'
 
 const Body = () => {
   return (
-    <div className='flex gap-6'>
+    <div className='flex flex-1 overflow-hidden gap-6'>
         <SideBar />
         <MainContainer />
     </div>

@@ -5,7 +5,7 @@ import userIcon from "../assets/user_icon.png";
 
 const Header = () => {
   return (
-    <header className="grid grid-cols-[1fr_3fr_1fr] items-center shadow-md p-4">
+    <header className="bg-white grid grid-cols-[1fr_3fr_1fr] items-center shadow-md p-4 sticky top-0 z-10 ">
       <div className="flex gap-3 items-center">
         <img
           src={hamburgerIcon}
