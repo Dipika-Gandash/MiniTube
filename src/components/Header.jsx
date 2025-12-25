@@ -2,8 +2,15 @@ import React from "react";
 import hamburgerIcon from "../assets/hamburger_icon.png";
 import searchIcon from "../assets/search_icon.png";
 import userIcon from "../assets/user_icon.png";
+import { toggleMenu } from "../store/appSlice";
+import { useDispatch } from "react-redux";
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const handleToggleMenu = () => {
+    dispatch(toggleMenu());
+  }
   return (
     <header className="bg-white grid grid-cols-[1fr_3fr_1fr] items-center shadow-md p-4 sticky top-0 z-10 ">
       <div className="flex gap-3 items-center">
@@ -11,6 +18,7 @@ const Header = () => {
           src={hamburgerIcon}
           alt="menu"
           className="w-8 h-8 cursor-pointer"
+          onClick={handleToggleMenu}
         />
         <h1 className="text-3xl font-bold text-red-500 cursor-pointer">
           MiniTube
